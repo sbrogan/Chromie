@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+	<<link rel=stylesheet href="..\gentelella-master\build\css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+    height: 100%;
+    width: 60px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    margin: auto;
+
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+    margin-left: 75px;
+}
+
+.sidenav .hidden {
+	visibility: hidden;
+}
+
+</style>
+</head>
+<body>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fas fa-times fa-xs hidden" id="close_sidebar_fa"></i></a>
+  <a href="#"><i class="fas fa-tachometer-alt" id="about_fa"></i><span class="hidden" id="about"> About</span></a>
+  <a href="#"><i class="fas fa-chart-bar" id="services_fa"></i><span class="hidden" id="services"> Services</span></a>
+  <a href="#"><i class="fas fa-gavel" id="clients_fa"></i><span class="hidden" id="clients"> Clients</span></a>
+  <a><i class="fas fa-bars fa-sm" id="open_sidebar_fa" onclick="openNav()"></i></a>
+</div>
+
+<div id="main">
+  <h2>Sidenav Push Example</h2>
+  <p>Click on the element below to open the side navigation menu, and push this content to the right.</p>
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+</div>
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.getElementById("close_sidebar_fa").classList.remove('hidden');
+    document.getElementById("about").classList.remove('hidden');
+    document.getElementById("services").classList.remove('hidden');
+    document.getElementById("clients").classList.remove('hidden');
+    document.getElementById("open_sidebar_fa").classList.add('hidden');
+
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "60px";
+    document.getElementById("main").style.marginLeft= "75px";
+    document.getElementById("close_sidebar_fa").classList.add('hidden');
+    document.getElementById("about").classList.add('hidden');
+    document.getElementById("services").classList.add('hidden');
+    document.getElementById("clients").classList.add('hidden');
+    document.getElementById("open_sidebar_fa").classList.remove('hidden');
+
+}
+</script>
+     
+</body>
+</html> 
